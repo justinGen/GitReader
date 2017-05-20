@@ -1,0 +1,167 @@
+/*===========================================================================
+  CONTROLS
+
+  The standard Monocle stylesheet for the optional Monocle controls. See
+  comments for monocore.css, which apply here too.
+---------------------------------------------------------------------------*/
+
+/* Contents */
+
+div.monelem_controls_contents_container {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  left: 12.5%;
+  top: 12.5%;
+  background: #EEE;
+  border: 2px solid #F7F7F7;
+  border-radius: 9px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+}
+
+ol.monelem_controls_contents_list {
+  margin: 6px;
+  padding: 0;
+}
+
+li.monelem_controls_contents_chapter {
+  list-style: none;
+  line-height: 220%;
+  padding-left: 1em;
+  padding-right: 2em;
+  border-bottom: 2px groove #FEFEFE;
+  cursor: pointer;
+}
+
+li.monelem_controls_contents_chapter_active {
+  background: #999;
+  color: white;
+}
+
+/* Magnifier */
+
+.monelem_controls_magnifier_button {
+  cursor: pointer;
+  color: #555;
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  padding: 0 2px;
+}
+
+.monelem_controls_magnifier_a {
+  font-size: 11px;
+}
+
+.monelem_controls_magnifier_A {
+  font-size: 18px;
+  opacity: 0.3;
+}
+
+
+/* Spinner */
+
+.monelem_controls_spinner_anim {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+/* Scrubber */
+
+div.monelem_controls_scrubber_container {
+  position: absolute;
+  left: 1em;
+  right: 1em;
+  bottom: 4px;
+  height: 30px;
+  background: rgba(255,255,255,0.8);
+}
+
+div.monelem_controls_scrubber_track {
+  margin-top: 10px;
+  height: 5px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+div.monelem_controls_scrubber_needle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 5px;
+  background: #CCC;
+  border: 1px solid #999;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+div.monelem_controls_scrubber_trail {
+  position: absolute;
+  background: #DDD;
+  top: 11px;
+  left: 1px;
+  height: 5px;
+}
+
+div.monelem_controls_scrubber_bubble {
+  display: none;
+  position: absolute;
+  padding: 1em;
+  min-width: 20%;
+  max-width: 30%;
+  bottom: 2.5em;
+  background: rgba(0, 0, 0, 0.9);
+  color: #CCC;
+  font: bold 12px Lucida Grande, Tahoma, Helvetica, Arial, sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+
+/* Stencil */
+div.monelem_controls_stencil_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.monelem_controls_stencil_mask {
+  display: block;
+  position: absolute;
+}
+
+div.monelem_controls_stencil_highlighted .monelem_controls_stencil_mask {
+  background: rgba(0,0,255,0.15);
+}
+
+
+/*===========================================================================
+  DATA URIs
+
+  These are data-uri packed images, inlined for loading speed and simplicity.
+  Placed at the end of this file because they're visually noisy...
+---------------------------------------------------------------------------*/
+
+div.monelem_controls_spinner_anim {
+  /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA0CAMAAAANBM47AAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M1cbXjNgAAABV0RVh0Q3JlYXRpb24gVGltZQAxNy81LzEwnOhoKAAAAE5QTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxKKmWQAAABp0Uk5TAAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBl0wLilAAAC8klEQVQYGZXBB2LjOAADQFCimtVFEoD//9HLbrJxipzoZoBToYptUwV8V/Xrsc8RP6i7aduPXHI69mWIAR9UY6Is5rnCuTBsWXeLkijbTFOLf7okW6R8zxEnwphskfIrifJdW4u/RtlpbGLsdjoHfDNkSZTSNg192w3jchSJEtcawCRzDvgjLPINX1SbSSvNXcC7eNuLXpQuTFbp8CZkH/isyS68H0PAF+0iUzxoNni33HPAR51UxDHgRLObslLEw3TPFT7oKPqIeOImURs+WJ0CHlqKXgLOxL4NgyRqxbuqeMNDXURPOBNWSokquRRP+GeVOzwcLlpwJmx3WVJuY2ZRi1ezfOBhdNGGU52ZhrloBzqSucKLerdLxLtIKlc4Nd9LA6wuNTC5aAbQZzs3eFhE9Tg3mw2wqkQgHCZrTJK3iIcoasMTvXX0E30EAK2k+Wbrho8mky2eCLslSz3+2ERKucVHIZsbnqp2WWXEX60ossMnrakeP+jGocabg9SGzyaXHHDRpOIO/zRjDWCTNlzVsLjFm4bODapE33BZoke8mVy8oqXY4rLNXvFmEnXDKJYaly3SjlchkSOwiCngstFMeDXLE4CVygGX3e6FawUgzFIKANbiHHDZ7U4qL7c5SWzxYqFywGXjvVD3F3Zu8ccs5gqXzeYx7CTTWOOvnmTEZZu0ItSxrvAmZrrHZYme8dkhLbiqLkUDPlvMA1cNIiM+613Y4KJNSviiprTgmrrQM75arVzhkllUxFetqBlXVEXa8d0hMeKCxVSH73rRG37XidpxZlXRiN9UhYUtztRFVI+fhUPFE851KlSHn4TNxTueGU2yx3PVbipVeGpxIaeAJ2IynRv8YHEp3iNOjRRdGvxotGjONb7pD7M4RfyiK6ZclhYf1bdDprRW+FW9SZSUlqGtq1BVTTftRaKce1zS7bIpWyW/oK0i38tU4apupWyRsijKVhoj/o+6W45cJEoqaR+bgP8txH5a1nUZ2gq/+Q/51T5MhuG3fQAAAABJRU5ErkJggg==);
+	*/
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAuCAQAAAAlvEe2AAAJeElEQVRYw81YeVRU1xn/ggRRWaq4YEIkhBgjiRZRIooikcUIoxRiFJJYsB57Us9Ja9vY9KS2J4cdBwQUkC2CK4JKEISMihSEgiCIRBEQNGDCvgWQgZlh5va77zEwb5ZAAjF5958377575/e+5ff9vgsEJhrwHBiApUnIJylmfJjFmZmj5esY45ueXphVEprpGAMbQXfi/SbxjxND0vazigjOqHrY0/vGEdBTmLEz56fmt7ZLJAQvqbS1/dQN42CweRagFjjH9PXTv+3q0fUHrbHnDjsSevuI0tXW6RANm58BKPCueUz/sOEJ7B17arUjQShE+8iq6oIz9iT7JPmn1zfRtwYHdySA9c8KChZq+wnKCBFL+p+W3oP3Rp/O0At40kJIebVLLHwAlmCKYyX8IShDLCakpW1RMBhMCRQYggks0jD5Irhfv02/PznXnL8nGUxHn689lk3I0SuwC8w47285cE4qIyS9EBynBMo60usL11h14QnG4F5YSSGduA48mD0GaeYLIa0d+04CT80a16xiQp4OmvNh9hRAfVVKw1PbD55TjiUdvxsVFFJqAULSUQS7Pe6jU7BW7XZzrSJorH2SAsumCqpDGRQsAh6NJUJS8hGSHmdOS9dfy1f5I8ZmvSprmVX2UwCVc0sVFMwDXm45hRSUgZDmqCzS0gSJUsWlQkIKK8F9WkEhf/OySgiRySKvqIubCTbceOoGIWXVsHMaQYER8Oi3EhL7Fbj+hA0dLt4kpKgKPKYNFMwBXvYtCiksCx2n9RM2ZGIqrWAqvM4BBbOAl5pPIcULWMeBFWwH19HhgmP8foHa7ebbHB0aIuTgeeXsQza0BWdYD/NV1pjC2+AIS2GGGlDUSmfyWKpEK82gkMKy8iqulbFDUCoYvbt2W1C2OgIM1fEUzeb+Aa6egJfgXc/EE9czixOvopZQSB14GXbuSU7NTy88cG62P7ypDEpHbqXEq7hs5rgr1F8eCbBYBdI67yTK6FxCAANd/+Iq+ToZSc2Xpw8Y6wWU3ZfP1DW+EAIrFEAh7/CSr9Opc/9FSNqji3xqHwtKzfhrIy3DXWMlI1nF9N4qYuvxQaHXF2CiBGmeGb+9i5AnLYaBijTCkoSgdE+yXdS+k7VY3I9lwxZmZnse0vP1227xjjFpBYTUN+kFMB5iQcHH0TkMe1OqHCsQsPt+A61j8BswMAmRSM7mwSZ6b3r46VNVS2GKlFDdgGxvpfB0lunh1vYD53BfU+Q/C/2A+iaxeMUR0Acb33RCMopwxhjmAy80EzNeQOEyoJ60JF6lkIZFayPBSGHD9YlXS76GHXinu+SwZAStuImy/ba4ji5UAjocSLaHLtA9zuRxiQQsDl34NBXeGvu94vcnCAn8En6r5dvW2dyGPhqNTdhV/kAsXhmOcCmoEXpJv0cpl30L3lHYUFs/AIv1EiVQehZhKOXWcYv3q6HdPYQ0foeu40rmWWZ8FIdrxn5jOZdI0D5O+08zFWNMe8ErLrFY/K9hlubcksnoF17+384EQiSS7XHwhiIsVtYogqKwlBMbttHiLRLjJ1gqzayJvNLcahIiV++gsyBIJMoqBq87NX0DcwPheYV3//Rty6Nv9QMoKISUcws961GEOVL7DfioSXUOKJVZO99L9MNO32ADmDO3MuBLQnySwEIuGx2imVD/5+Bg4V1uhaQpMSLFD6Pu6+5BoxvBSyvDqQv/fQE2/BhQsNQ6kqr1qjqMD13VlSYhQmHNY/CmdEvr6jWUjfZRK8MZmcgRzrDs4HlCPr80TgmU0TfFChBiL1Kf4Y8A9UFVHSbJ8NvRsFR9NaSUfK0Md/2rURClh9xy4HknEbL/NJhz3jS0jiQEc5xTZlB7NzWjnC0C58mCAuewLOq6qGxw0lDJZrHWEYm7e4eHCbn3ED5kbYLxa8x5U2dR8LBIUKZckFftTcblImwIXpsMKFjmGjssIqTiAXhqLK8rVkfUN9Li09z6Pbq5tcM+CjZ8fpGQLce5FRS0DQMHhfl3VKXLrvJq9msmBoXVcvf9etpW2UXBK5rspOPX0ESTADNtv45fVPaItKfXMPDTVEK2HoeFyqCEwvwKVVBm1pGDg4T87ZxiM6EB1JYUploeuqBZqMCmsxhRR6gQ0mU0q8ufz9LKQSnUM5FbqmhSiCVZJeqU5+aTubSZGOcW9aBglVs87fPG+0F1Tb+Wb1d3Q9N4G4vPPrxX39NLA/2zNFjO7Qy2xTGySQ2omcbBrR2EnLox3r2pggL9uYGNzZROsJ0yVTkSmSFXCJbhTItmqzC7/LM0SjxiMfKaHWedZchlQrBOqm0c1v4FTSwcWn9UHilqQLlcuEld9680xT+UWwe10WqWKrceZ5jnTUU1sfHYN9/5JDW33W+A3ZyVvyuoHBRaR6oFJeee8gewSz0oeOvjM1IpQx5e2LgrDW2/8urwK3i3lAJgImo11yKwD5wyimQEP3uuYqXtHyivxr5bA6ilzjEiTPW9ySznKtU+kwVBre3UTrWPK2urHqqMOspHVXXb4sBmQdDQcNFdbhsBpnZRr4XaItyLN8cFANj94zxjeYtxRp+jTIq0K2luwwKkrQLKo+gumcTV1olC5L3SezIZimDbsRK/1SG65B6WXSzJEollOKu+wMw4uLevsRn+OKqnuro3Hns9jCv1Qd/0cHsnI47tlaQLuuRubUVN+QMNo7r8gUgkGcksXnIYbMDUPmpouKvHOQbc8JeTfgA/UzLCz4RVYE698aQFBd9m2GAUVFbNeGYV07YzyoXcr+cGHU7Z0CzpH7CKgCVKlnoV3gdP9L2GoRdQWInbb2XjBZz+c1FGpNL8O7GCjCKqupCz3VhvUF7vG0grSM7t7GaqHm/0LIEFVfMIvFVYxrvmESHFX8O7PyxdVLMPY/RlRaHsHk/pg179A6GZaLPF8pmPTvX00udCIapRHisQwSrCI8EjYWcCForlKtsvd42l9OidBGt0/NzjuWeeP3h0q3yGs0rHzz7KO8kl1iiIe/RBHecW75mInYzD+KGZASzG8SLMU7v9O7QZaG7FrQzxLb0pdL1aqNiWwEJFpTk68zw2DiZsUze548V5GO5dbM8xHYfR03UQu44KfEJCLqtK3V8MFA1GqhZFYppPvx5QBuzZ58jI31PAVd0Jwi8Aip4S6/pTkpXKMoqw1NrCXM0nec8MFHuUxs+kYrarJzpn/VHNZ57PEBRbMI2DD57PKimo5Gdi5dL++UD9H+OFaAWmKRpLAAAAAElFTkSuQmCC);
+  }
